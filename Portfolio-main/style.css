@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.main, .about, .skills {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #191970;
+}
+
+nav {
+    position: relative;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4vw;
+    background: transparent;
+    color: white;
+    box-shadow: rgba(57, 57, 209, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+ul {
+    display: flex;
+    gap: 1rem; 
+}
+
+ul a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.5s ease-in;
+}
+
+.logo h2 {
+    color: gold;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #f0f0f0;
+    color: #191970;
+}
+
+.welcomePage {
+    width: 100%;
+    height: 80vh;
+    min-height: 80vh;
+    display: flex;
+    padding: 4rem 4rem;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+}
+img {
+    width: 28vw;
+    height: auto;
+    border-radius: 50%;
+    animation: scaleAnimation 3s infinite ease-in-out;
+}
+
+.welcomeMessage {
+    text-align: left;
+    display: flex;
+    gap: 1.5rem; 
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.welcomeMessage h2 {
+    color: gold;
+    font-size: 2.4rem;
+}
+
+.welcomeMessage p {
+    font-size: 1.15rem;
+    color: white;
+    line-height: 1.5rem;
+}
+
+.auto-type {
+    background-color: white;
+    color: purple;
+    border-radius: 10px;
+    padding: 0.25rem;
+}
+
+button {
+    width: 10rem;
+    height: 3rem;
+    background-color: gold;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid gold;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: transparent;
+}
+
+.fa-twitter {
+    color: white;
+    background-color: purple;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    font-size: 1.875rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-twitter:hover {
+    background-color: transparent;
+    transform: scale(1.2);
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.aboutInfo {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 3vw;
+    color: white;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.skillsInfo {
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    justify-items: center;
+    margin-top: 4rem;
+    gap: 1.5rem;
+}
+
+.skillCard {
+    background-color: gold;
+    border-radius: 50%;
+    height: 12.5rem;
+    width: 12.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.skillCircle {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background-color: #191970;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+i {
+    font-size: 3rem;
+    color: gold;
+}
+
+.skillCircle p {
+    font-size: 2rem;
+}
+
+.skillsTitle {
+    text-align: center;
+    color: white;
+    font-size: 2.3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.toggleNav{
+    display: none;
+}
+.cross{
+    display: none;
+}
+@media only screen and (max-width: 1024px) {
+    .welcomePage {
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 2rem;
+    }
+    .welcomeMessage{
+        align-items: center;
+    }
+    .welcomeMessage {
+        padding-left: 2rem;
+        text-align: center;
+    }
+
+    img {
+        width: 40vw;
+    }
+
+    .welcomeMessage h2 {
+        font-size: 2.4rem;
+    }
+
+    .welcomeMessage p {
+        font-size: 1.4rem;
+    }
+
+    button {
+        width: 10rem;
+        font-size: 1rem;
+    }
+
+    .aboutInfo {
+        flex-direction: column;
+        font-size: 1.25rem;
+    }
+
+    .skillsInfo {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .skillCard {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .skillCircle p {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .welcomePage {
+        grid-template-columns: 1fr 1fr;
+        padding: 3vw;
+    }
+    .welcomeMessage{
+        align-items: center;
+    }
+    .welcomeMessage h2 {
+        font-size: 1.75rem;
+    }
+
+    .welcomeMessage p {
+        font-size: 0.9rem;
+    }
+
+    img {
+        width: 40vw;
+    }
+
+    button {
+        width: 7rem;
+        font-size: 0.75rem;
+    }
+    .aboutInfo {
+        font-size: 1.1rem;
+    }
+
+    .skillsInfo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skillCard {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .skillCircle p {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .welcomePage {
+        flex-direction: column-reverse;
+        position: relative;
+    }
+    ul{
+        background-color: transparent;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 6rem;
+        backdrop-filter: blur(10px);
+        display: none;
+    }
+    nav ul a {
+        padding: 0.5rem;
+        font-size: 3rem;
+        font-weight: bolder;
+        background-color: gold;
+        padding: 10px;
+        color: #191970;
+    }
+    .cross{
+        position: absolute;
+        top: 1rem;
+        right: 1.8rem;
+    }
+    .logo h2 {
+        font-size: 1.5rem;
+    }
+     .welcomeMessage{
+        margin-left: 0rem;
+        text-align: center;
+        align-items: center;
+        padding-right: 1rem;
+     }
+    .welcomeMessage h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .welcomeMessage p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    img{
+        width: 80vw;
+        height: auto;
+
+    }
+    button {
+        width: 7rem;
+        font-size: 0.875rem;
+    }
+
+    .aboutInfo {
+        font-size: 1rem;
+    }
+
+    .skillsInfo {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skillCard {
+        height: 9rem;
+        width: 9rem;
+    }
+    .skillCard h2{
+        font-size: 1.2rem;
+    }
+    .skillCircle p {
+        font-size: 1rem;
+    }
+    .toggleNav{
+        display: block;
+    }
+}
